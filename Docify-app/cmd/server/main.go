@@ -11,7 +11,7 @@ import (
 
 func main() {
 	cfg := config.Load()
-    mongoClient := db.ConnectMongo(cfg.MongoURI)
+	mongoClient := db.ConnectMongo(cfg.MongoURI)
 	defer mongoClient.Disconnect(nil)
 	router := api.NewRouter()
 
