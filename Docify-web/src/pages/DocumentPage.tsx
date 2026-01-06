@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { createYDoc } from '../crdt'
-import { Editor } from '../editor'
+import { Editor } from '../editor/index'
 import * as Y from 'yjs'
 
 export default function DocumentPage() {
@@ -9,19 +9,17 @@ export default function DocumentPage() {
   const [ydoc, setYDoc] = useState<Y.Doc | null>(null)
 
   useEffect(() => {
-    if (!docId) return
+  if (!docId) return
 
-    // 1. Create CRDT document
-    const doc = createYDoc()
+  const doc = createYDoc()
 
-    // snapshot loading will go here later
+  setYDoc(doc)
 
-    // setYDoc(doc)
+  return () => {
+    doc.destroy()
+  }
+}, [docId])
 
-    return () => {
-      doc.destroy()
-    }
-  }, [docId])
 
   if (!ydoc) return <div>Loading...</div>
 

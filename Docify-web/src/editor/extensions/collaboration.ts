@@ -1,4 +1,4 @@
-import Collaboration from '@tiptap/extension-collaboration'
+import {Collaboration} from '@tiptap/extension-collaboration'
 import * as Y from 'yjs'
 
 export function getCollaborationExtension(ydoc: Y.Doc) {
