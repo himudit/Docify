@@ -1,1 +1,83 @@
+# ========================
+# Node / Package Managers
+# ========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ========================
+# Build Outputs
+# ========================
+dist/
+build/
+out/
+
+# ========================
+# Vite
+# ========================
+.vite/
+
+# ========================
+# Environment Variables
+# ========================
 .env
+.env.*
+!.env.example
+
+# ========================
+# Editor / OS Files
+# ========================
+.DS_Store
+Thumbs.db
+
+# ========================
+# IDE / Editor Settings
+# ========================
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+
+# ========================
+# TypeScript
+# ========================
+*.tsbuildinfo
+
+# ========================
+# Coverage / Testing
+# ========================
+coverage/
+
+# ========================
+# Logs
+# ========================
+logs/
+*.log
+
+# ========================
+# Temporary / Cache
+# ========================
+.cache/
+.temp/
+.tmp/
+
+# ========================
+# Yjs / CRDT (Optional)
+# ========================
+*.ydoc
+*.yjs
+
+# ========================
+# Local Database (if any)
+# ========================
+*.sqlite
+*.db
+
+# ========================
+# Misc
+# ========================
+*.pem
+*.key

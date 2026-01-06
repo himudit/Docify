@@ -16,7 +16,7 @@ export default function DocumentPage() {
 
     // snapshot loading will go here later
 
-    setYDoc(doc)
+    // setYDoc(doc)
 
     return () => {
       doc.destroy()
