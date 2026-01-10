@@ -21,5 +21,7 @@ func NewRouter() http.Handler {
 	// Existing routes
 	mux.HandleFunc("/documents", handlers.CreateDocument)
 
+	mux.HandleFunc("/api/dummyData", handlers.GetDummyUser)
+
 	return mux
 }

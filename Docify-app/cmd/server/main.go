@@ -6,11 +6,13 @@ import (
 
 	"Docify-app/internal/api"
 	"Docify-app/internal/config"
+	"Docify-app/internal/db"
 )
 
 func main() {
 	cfg := config.Load()
-
+    mongoClient := db.ConnectMongo(cfg.MongoURI)
+	defer mongoClient.Disconnect(nil)
 	router := api.NewRouter()
 
 	addr := ":" + cfg.Port
